@@ -184,6 +184,12 @@
      pulgar. Se les da área con relleno y se compensa con margen, así el icono se ve
      igual y en el mismo lugar, pero el dedo acierta. */
   .hero-socials a { padding: 11px; margin: -11px; }
+
+  /* La firma de la casa: una línea discreta bajo el nombre del negocio.
+     Los dos enlaces medían 14 px de alto; se les da área con relleno y se compensa
+     con margen, como a los iconos del hero: se ven igual y el dedo acierta. */
+  footer .credito { margin: 10px 0 0; font-size: 0.78rem; line-height: 1.75; }
+  footer .credito a { color: inherit; display: inline-block; padding: 15px 0; margin: -15px 0; }
 </style>
 <script type="application/ld+json">
 {
@@ -369,7 +375,13 @@
 
 <footer>
   Zavaleta Kickboxing / MMA — Apatzingán, Michoacán
+  <p class="credito">© <span id="anio">2026</span> Zavaleta Kickboxing / MMA ·
+    Hecho por <a href="https://wildpig94.github.io/camena-web/" target="_blank" rel="noopener">CAMENA</a> ·
+    <a href="mailto:camenalabs@proton.me">camenalabs@proton.me</a></p>
 </footer>
 
+<script>
+(function(){var a=document.getElementById("anio");if(a)a.textContent=new Date().getFullYear();})();
+</script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+# El sitio se publica tal cual: nada de aquí se genera en el servidor.
+.DS_Store
+Thumbs.db
+*.log
+
+# Copias de trabajo
+*.bak
+*.orig
+
+# Archivo que el guion saca del HTML original para rehacer el icono y la imagen de
+# compartir: es derivado, no hace falta publicarlo (pesa 111 KB y la página no lo usa).
+imagenes/logo-original.png
+
+# Documentos internos: viven fuera del repositorio, porque GitHub Pages publica
+# toda la rama y convertiría cualquier .md en una página web del dominio del cliente.
+REVISION.md
+construir.py

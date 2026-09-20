@@ -17,7 +17,6 @@ Pages: **https://wildpig94.github.io/zavaleta-kickboxing-web/**
 | `imagenes/` | El logo, la foto del hero y la del área de entrenamiento |
 | `favicon-32.png`, `apple-touch-icon.png`, `icono-192.png` | El icono en la pestaña y al guardarlo en el teléfono |
 | `og.jpg` | La imagen que se ve al compartir el enlace por WhatsApp o Facebook |
-| `construir.py` | Cómo se armó este `index.html` desde el archivo original |
 
 ## Cómo se trabaja
 
@@ -37,13 +36,6 @@ visible en el diseño—:
 5. Las fotos y el logo declaran su tamaño, así la página ya no salta mientras carga.
 6. Los enlaces del pie y los iconos del hero llegaron a 44 px de alto: medían 20 y
    22 px, que en un teléfono no se pueden tocar con el pulgar.
-
-Para rehacerlo desde el original:
-
-```bash
-python3 construir.py            # escribe index.html
-python3 construir.py --revisar  # solo dice qué cambios haría
-```
 
 ## Verificación
 

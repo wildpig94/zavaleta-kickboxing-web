@@ -215,6 +215,15 @@
   }
   /* Quien pida reducir movimiento ve una sola foto, quieta. */
   @media (prefers-reduced-motion: reduce) { .hero::after { animation: none; } }
+
+  /* Los logotipos de las organizaciones: van sobre placa crema porque uno es claro y
+     el otro vino oscuro, y sobre el negro de la página uno brillaría y el otro se
+     perdería. La caja es cuadrada y el logo se ajusta dentro, así dos logos de
+     proporciones distintas se ven del mismo tamaño. */
+  .avales { padding: 44px 0; border-bottom: 1px solid var(--line); }
+  .avales-fila { display: flex; justify-content: center; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .avales img { width: 110px; height: 110px; object-fit: contain; background: var(--ink);
+                border-radius: 12px; padding: 12px; }
 </style>
 <script type="application/ld+json">
 {
@@ -396,6 +405,15 @@
     </div>
     <div style="margin-top:36px;">
       <a class="btn btn-primary" href="https://wa.me/524531122203?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases" target="_blank" rel="noopener">Agenda tu clase de prueba</a>
+    </div>
+  </div>
+</section>
+
+<section class="avales" aria-label="Organizaciones">
+  <div class="wrap">
+    <div class="avales-fila">
+      <img src="imagenes/logotipo-1.jpg" width="420" height="420" loading="lazy" decoding="async" alt="" aria-hidden="true">
+      <img src="imagenes/logotipo-2.jpg" width="398" height="420" loading="lazy" decoding="async" alt="" aria-hidden="true">
     </div>
   </div>
 </section>

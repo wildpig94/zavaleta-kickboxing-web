@@ -195,6 +195,26 @@
      dos verticales van lado a lado, cada una con su proporción. */
   .galeria-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; align-items: start; }
   .galeria-grid img:first-child { grid-column: 1 / -1; }
+
+  /* El hero alterna dos fotos: la de la clase abajo, la fachada entrando encima.
+     Los tres niveles son a propósito: la fachada (1) pasa sobre la de abajo, el
+     degradado (2) sobre las dos, y el titular y los botones (3) sobre todo. */
+  .hero::before { z-index: 2; }
+  .hero-inner { z-index: 3; }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: url('imagenes/hero-fachada.jpg') center 30% / cover;
+    opacity: 0;
+    animation: heroAlterna 16s ease-in-out infinite;
+  }
+  /* 16 s de vuelta: siete con cada foto y un segundo de cruce. */
+  @keyframes heroAlterna {
+    0%, 43%  { opacity: 0; }
+    50%, 93% { opacity: 1; }
+    100%     { opacity: 0; }
+  }
+  /* Quien pida reducir movimiento ve una sola foto, quieta. */
+  @media (prefers-reduced-motion: reduce) { .hero::after { animation: none; } }
 </style>
 <script type="application/ld+json">
 {
